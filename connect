@@ -1,0 +1,8 @@
+<?php
+include("connect.php");
+$name = $_GET ['sel_candidate'];
+echo $name."<br />
+$query ="update voterlist set vote=vote+ where name=$name";
+mysqli_query($dbh,$query)or die("Error updating the vote");
+echo "Your vote is successful","<br />";
+?>
